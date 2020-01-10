@@ -12,22 +12,12 @@ namespace NumeroFactorial.WebApi.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] {"Coloque un número en la URL como parametro para sacar su factorial, ejemplo ", "'/api/values/5'"};
+            return new string[] {"Coloque un número en la URL como parametro para sacar su factorial, ejemplo ", "'/api/fact/5'"};
         }
 
         // GET api/values/5
         public string Get(ushort id)
         {
-            if (id >= 0)
-            {
-                ulong fact = 1;
-                for (ushort i = 1; i <= id; i++)
-                {
-                    fact *= i;
-                }
-                return "" + fact;
-            }
-
             return "Número mal colocado";
         }     
 
